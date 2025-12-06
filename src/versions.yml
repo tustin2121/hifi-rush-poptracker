@@ -1,0 +1,6 @@
+versions:
+  - package_version: 0.0.0
+    download_url: https://codeload.github.com/tustin2121/hifi-rush-poptracker/zip/refs/tags/v0.0.0
+    sha256: 22e8323831aed34a4e03d8563ea8c60f8871339ae64e486675bdcb86368d0d79
+    changelog:
+      - Initial commit

@@ -1,0 +1,17 @@
+name: Hi-Fi Rush
+game_name: Hi-Fi Rush
+package_uid: ap_hibiki2023
+package_version: null
+author: null
+
+versions_url: https://raw.githubusercontent.com/tustin2121/hifi-rush-poptracker/master/versions.json
+min_poptracker_version: 0.23.1
+target_poptracker_version: 0.23.1
+
+variants:
+  standard:
+    display_name: Map Tracker
+    flags: []
+      # - ap        # supports Archipelago autotracking
+      # - uat       # supports UAT autotracking
+      # - apmanual  # supports sending locations to Archipelago
