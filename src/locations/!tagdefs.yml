@@ -1,0 +1,86 @@
+%YAML 1.2
+---
+### NPCs ###
+smidge: # Recurring character Smidge
+  prefix: Smidge
+noir: # Recurring characters SEB-AAA and JSF-001
+  prefix: NPC
+  name: SEB-AAA and JSF-001
+tan: # Recurring character Tanning SBR-001
+  prefix: NPC
+npc: # NPCs you can talk to or hit
+  prefix: NPC
+scrub: # SCR-UB bots that are just around and you can destroy if you're a monster
+  prefix: SCR-UB
+
+### Permanent Collectables ###
+life: # Life Gauge Pieces
+  prefix: Life Gauge
+health: # Health Tank Pieces
+  prefix: Health Tank
+reverb: # Electric Reverb Cores
+  prefix: Reverb Core
+circuit: # Armstrong Circuits
+  prefix: Armstrong Circuit
+comic: # Move Comics
+  prefix: Comic
+
+### Static Collectables ###
+vlog: # Vlogs you can read
+  prefix: Vlog
+door: # SPECTRA doors
+  name: Find the SPECTRA Door
+spectra: # Completing the SPECTRA challenge doors
+  name: Beat the SPECTRA Challenge
+graffiti: # Graffiti Locations
+  prefix: Graffiti
+statue: # Golden Kale Statues
+  prefix: Golden Kale Statue
+board: # Announcement Drones
+  prefix: PA
+vend: # Vending Machines
+  prefix: Vending Machine
+drone: # Comic Drones on Track 5
+  prefix: Drone
+moment: # Moments, Like cut scenes and milestones in the level
+  {}
+
+### Esoterica ###
+# easter:       { requires: "{YamlEnabled(easter_sanity)}", category: [ Easter Eggs ], c: [ easter-first, easter-post ] }
+# easter-first: { requires: "{YamlEnabled(easter_sanity)} and YamlDisabled(post_game)}", category: [ Easter Eggs ], c: [ first ] }
+# easter-post:  { requires: "{YamlEnabled(easter_sanity)} and YamlEnabled(post_game)}",  category: [ Easter Eggs ], c: [ post ] }
+snail: # Tango-Chan Snail Locations
+  prefix: Snail
+
+### Level Logic ###
+post:    # Check is only available when playing on a post-game save file
+  visibility_rules: [ opt_postgame_on ]
+  
+first:   # Check is only available when playing on a first play-through save file
+  visibility_rules: [ opt_postgame_off ]
+  
+pepper:  # Peppermint Summon
+  {}
+macaron: # Macaron Summon
+  {}
+korsica: # Korsica Summon
+  {}
+chorus:  # Choruses
+  prefix: Chorus
+  prefix_separator: ""
+level:   # Level Completion
+  {}
+boss:    # Boss Characters
+  {}
+
+### Achievements ##
+achieve-1: # Level 1 Achievements
+  prefix: Achievement
+achieve-2: # Level 2 Achievements
+  prefix: Achievement
+achieve-3: # Level 3 Achievements
+  prefix: Achievement
+achieve-4: # Level 4 Achievements
+  prefix: Achievement
+
+

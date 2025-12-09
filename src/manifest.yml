@@ -10,8 +10,14 @@ target_poptracker_version: 0.23.1
 
 variants:
   standard:
-    display_name: Map Tracker
+    display_name: TRPG0's Archipelago Mod
     flags: []
       # - ap        # supports Archipelago autotracking
       # - uat       # supports UAT autotracking
       # - apmanual  # supports sending locations to Archipelago
+  tustin_manual:
+    display_name: Tustin2121's Manual World
+    flags:
+      # - ap        # supports Archipelago autotracking
+      # - uat       # supports UAT autotracking
+      - apmanual  # supports sending locations to Archipelago

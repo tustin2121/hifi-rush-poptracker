@@ -1,0 +1,137 @@
+%YAML 1.2
+%OUTPUT flatten
+# TODO: OUTPUT type for items: id -> "codes" and "img"
+---
+# Track Access
+- $common: { type: toggle }
+  $for:
+    - { id: track_01, name: Track 1 Access  }
+    - { id: track_02, name: Track 2 Access  }
+    - { id: track_03, name: Track 3 Access  }
+    - { id: track_04, name: Track 4 Access  }
+    - { id: track_05, name: Track 5 Access  }
+    - { id: track_06, name: Track 6 Access  }
+    - { id: track_07, name: Track 7 Access  }
+    - { id: track_08, name: Track 8 Access  }
+    - { id: track_09, name: Track 9 Access  }
+    - { id: track_10, name: Track 10 Access }
+    - { id: track_11, name: Track 11 Access }
+    - { id: track_12, name: Track 12 Access }
+
+- $common: { name: "Summon | ", type: toggle }
+  $for:
+    - { id: partner_p, name: Peppermint }
+    - { id: partner_m, name: Macaron    }
+    - { id: partner_k, name: Korsica    }
+
+- $common: { name: "Chip | ", max_quantity: 3 }
+  $for:
+    - { id: chip_healPlus,    name: Health Kick  }
+    - { id: chip_battPlus,    name: Battery Magnet  }
+    - { id: chip_scorePlus,   name: Rhythm Meter Rush  }
+    - { id: chip_pHeal,       name: Parry Health  }
+    - { id: chip_pBatt,       name: Parry Charge  }
+    - { id: chip_dpInv,       name: Invincible D-Parry  }
+    - { id: chip_dpDmg,       name: Damage Rebound D-Parry  }
+    - { id: chip_comboPlus,   name: Combo Holder  }
+    - { id: chip_pullPlus,    name: Rhythm Dodge Pull Plus  }
+    - { id: chip_pullCancel,  name: Rhythm Dodge Pull Cancel, max_quantity: 1 }
+    - { id: chip_summon,      name: Instant Partner Recharge, max_quantity: 1 }
+    
+    - { id: chip_spComp,      name: Peppermint Compatibility  }
+    - { id: chip_spMove,      name: Peppermint Shock Jump  }
+    - { id: chip_spBoost,     name: Peppermint Shock Advantage  }
+    
+    - { id: chip_smComp,      name: Macaron Compatibility  }
+    - { id: chip_smChance,    name: Macaron's Lucky Punch  }
+    - { id: chip_smBoost,     name: Macaron's Aftershock  }
+    
+    - { id: chip_skComp,      name: Korsica Compatibility  }
+    - { id: chip_skMove,      name: Super High Alert  }
+    - { id: chip_skBoost,     name: Korsica Stun Extend  }
+      
+    - $common: {  } # Post-Game only
+      $for:
+        - { id: chip_sensor,    name: Chip Sense,  max_quantity: 1 }
+    
+    - $common: {  } # Post-SPECTRA only
+      $for:
+        - { id: chip_dmgPlus,   name: "High Risk, High Return" }
+        - { id: chip_hpBar,     name: Enemy Analyze, max_quantity: 1 }
+        - { id: chip_gearBoost, name: Gear Increase, }
+
+- $common: { name: "Combo | ", type: toggle }
+  $for:
+    - $common: {  } # Initial moveset, not purchasable
+      $for:
+        - { id: move_LLL,  name: Humbuckler }
+        - { id: move_HHH,  name: Grandslam }
+        - { id: move_LHH,  name: Breakdown }
+        - { id: move_HLL,  name: Tremolo }
+        - { id: move_DL,   name: Dash Attack }
+        - { id: move_DH,   name: Air Launch }
+        - { id: move_LrLL, name: Rise Up }
+        - { id: move_aY,   name: Hammer-On }
+        - { id: move_LLLL, name: Air Countdown }
+    
+    - { id: move_LHLLL,  name: Echo Splash }
+    - { id: move_LLrLLL, name: Tune Up }
+    - { id: move_HLH,    name: Stomp Box }
+    - { id: move_HHLL,   name: Pickup Crash }
+    - { id: move_aLHHH,  name: Harmonic Beam }
+    - { id: move_aLHLH,  name: Compressor Slam }
+    - { id: move_LLHHH,  name: Arpeggio Stab }
+    - { id: move_LHmH,   name: Shred }
+    - { id: move_LA,     name: Quick Beat Hit }
+    - { id: move_pBY,    name: Steal Counter }
+    - { id: move_hH,     name: Gain Tornado }
+    - { id: move_hL,     name: Staccato Launch }
+    
+    - { id: move_spG,    name: Switch Kicker } # Ground
+    - { id: move_apA,    name: Master Blaster } # Air
+    - { id: move_apH,    name: Cannon Spike } # Hold
+    - { id: move_apR,    name: Kick Shot } # Retaliate
+    
+    - { id: move_smG,    name: Double Bass Drop }
+    - { id: move_amA,    name: High Strung }
+    - { id: move_amH,    name: Gravity Well }
+    - { id: move_amR,    name: Love Tap }
+    
+    - { id: move_skG,    name: High Security Risk }
+    - { id: move_akA,    name: Tornado Lift }
+    - { id: move_akH,    name: Korsica Typhoon }
+    - { id: move_akR,    name: High Alert }
+
+- $common: { name: "Special Attack | ", category: [ Special Attacks ], useful: true }
+  $for:
+    - { id: spa_pCord,    name: Power Cord } # Initial move, not purchasable
+    - { id: spa_gRide,    name: Guitar Ride }
+    - { id: spa_heal,     name: Pick Me Up! }
+    - { id: spa_pSlid,    name: Pick Slide }
+    - { id: spa_hPP,      name: High Pitch Punch }
+    - { id: spa_aCord,    name: Air Guitar }
+    - { id: spa_RIP,      name: Rip & Tear }
+    - { id: spa_dRiff,    name: Double Riff }
+    - { id: spa_mWall,    name: Barrier Wall }
+    - { id: spa_pAtk,     name: Twin Assault }
+    - { id: spa_catStun,  name: Steal the Show }
+    - { id: spa_distract, name: Holo-Chai }
+    - { id: spa_oSlash,   name: Overdrive Slash }
+    - { id: spa_hibiki,   name: Hibiki! }
+    
+    - $common: {  } # Post-Game only
+      $for:
+        - { id: spa_catAtk, name: 808-Gigawatt Cat-Attack }
+        - { id: spa_CNMN,   name: CNMANIAC }
+        - { id: spa_hero,   name: My Hero! }
+
+#------------------------------------------------------------------------------
+# Settings
+- name: Save File Type
+  type: progressive
+  loop: true
+  allow_disabled: false
+  stages:
+    - { name: Post Game Save,         img: img/opts/game_post.png,  codes: "opt_postgame,opt_postgame_on"  }
+    - { name: First Playthrough Save, img: img/opts/game_first.png, codes: "opt_postgame,opt_postgame_off" }
+

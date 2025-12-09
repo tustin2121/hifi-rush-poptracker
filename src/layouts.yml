@@ -1,0 +1,18 @@
+%YAML 1.2
+%OUTPUT flatten
+---
+tracker_default:
+  _: { type: array, orientation: vertical, margin: "0,0" }
+  content:
+    - _: { type: array, orientation: horizontal, margin: "0,0" }
+      content:
+        - { type: layout, key: shared_item_grid }
+
+tracker_broadcast:
+  _: {}
+
+tracker_horizontal:
+  _: {}
+
+shared_item_grid:
+  _: {}

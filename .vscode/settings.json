@@ -1,0 +1,49 @@
+{
+	"cSpell.words": [
+		"Defund",
+		"Korsica",
+		"Macaron",
+		"!Macron",
+		"Rekka",
+		"Smidge",
+		"VÄART",
+		"Vandelay",
+		"Zanzo"
+	],
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": "advanced",
+		"diffEditor.ignoreTrimWhitespace": false,
+		"editor.defaultColorDecorators": "never",
+		"editor.quickSuggestions": {
+			"strings": "on"
+		}
+	},
+	"json.schemas": [
+		{
+			"fileMatch": [ "out/manifest.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/manifest.json"
+		},
+		{
+			"fileMatch": [ "out/items/*.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/items.json"
+		},
+		{
+			"fileMatch": [ "out/locations/*.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/locations.json"
+		},
+		{
+			"fileMatch": [ "out/layouts/*.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/layouts.json"
+		},
+		{
+			"fileMatch": [ "out/maps/*.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/maps.json"
+		},
+		{
+			"fileMatch": [ "out/settings.json" ],
+			"url": "https://poptracker.github.io/schema/packs/strict/settings.json"
+		}
+	]
+}

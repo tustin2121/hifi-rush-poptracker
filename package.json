@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "archiver": "^7.0.1",
+    "commander": "^14.0.2",
     "semver": "^7.7.3"
   }
 }
