@@ -1,5 +1,4 @@
 %YAML 1.2
-%OUTPUT locations
 ---
 # Track 1: A Fresh Start
 name: Track 1
@@ -9,48 +8,48 @@ children:
       name: track01-01
       img: img/maps/track01-01.jpg
     $for:
-      - { name: Admire O5-KAR's stack,          t: [ npc ],    x:  0, y:  0 }
-      - { name: SCR-UB admires jumping,         t: [ npcB ],   x:  0, y:  0 }
-    # - { name: Shiny Floors,                   t: [ scrub ],  x:  0, y:  0 }
-      - { name: It's been a privilege,          t: [ npcB ],   x:  0, y:  0 }
-      - { name: CAR-11E's Spill,                t: [ npcB ],   x:  0, y:  0 }
-      - { name: Please collect your belongings, t: [ moment ], x:  0, y:  0 }
+      - { name: Admire O5-KAR's stack,          t: [ npc ],    x: 1390, y:  128 }
+      - { name: SCR-UB admires jumping,         t: [ npcB ],   x:  750, y:  134 }
+    # - { name: Shiny Floors,                   t: [ scrub ],  x:  762, y:   83 }
+      - { name: It's been a privilege,          t: [ npcB ],   x:  627, y:  883 }
+      - { name: CAR-11E's Spill,                t: [ npcB ],   x:  707, y:  960 }
+      - { name: Please collect your belongings, t: [ moment ], x: 1340, y: 1050 }
   - $map_def:
       name: track01-02
       img: img/maps/track01-02.jpg
     $for:
-      - { name: 1 | Is he resisting?,                 t: [ chorus ], x:  0, y:  0 }
-      - { name: His attacks sync up with the music!,  t: [ moment ], x:  0, y:  0 }
-      - { name: 2 | That's the Defect!,               t: [ chorus ], x:  0, y:  0 }
-      - { name: Musical Pigeons,                      t: [ snail ],  x:  0, y:  0 }
-      - { name: Light and Heavy Attacks,              t: [ smidge ], x:  0, y:  0 }
+      - { name: 1 | Is he resisting?,                 t: [ chorus ], x:  405, y:  805 }
+      - { name: His attacks sync up with the music!,  t: [ moment ], x:  405, y:  840 }
+      - { name: 2 | That's the Defect!,               t: [ chorus ], x:  405, y:  875 }
+      - { name: Musical Pigeons,                      t: [ snail ],  x:  835, y:  650 }
+      - { name: Light and Heavy Attacks,              t: [ smidge ], x: 1090, y:  660 }
   - $map_def:
       name: track01-03
       img: img/maps/track01-03.jpg
     $for:
-      - { name: 3 | You looking for me?,        t: [ chorus ],                x:  0, y:  0 }
-      - { name: Yelling like this is awkward!,  t: [ moment ],                x:  0, y:  0 }
-      - { name: Rekka's Looking For Slackers,   t: [ board, post ],           x:  0, y:  0 }
-      - { name: Interrupt SBR-001's Tan,        t: [ tan ],                   x:  0, y:  0 }
-      - { name: Dodging,                        t: [ smidge ],                x:  0, y:  0 }
-      - {                                       t: [ noir, pepper, post ],    x:  0, y:  0 }
-      - { name: HR Complaint,                   t: [ circuit, pepper, post ], x:  0, y:  0 }
-      - { name: HOST SYNCHRONIZED,              t: [ moment ],                x:  0, y:  0 }
-      - { name: To the Right,                   t: [ life ],                  x:  0, y:  0 }
-      - { name: Beat Hits,                      t: [ smidge ],                x:  0, y:  0 }
+      - { name: 3 | You looking for me?,        t: [ chorus ],                x:  465, y:  955 }
+      - { name: Yelling like this is awkward!,  t: [ moment ],                x:  400, y:  840 }
+      - { name: Rekka's Looking For Slackers,   t: [ board, post ],           x:  270, y:  620 }
+      - { name: Interrupt SBR-001's Tan,        t: [ tan ],                   x:  730, y:  760 }
+      - { name: Dodging,                        t: [ smidge ],                x:  870, y:  460 }
+      - {                                       t: [ noir, pepper, post ],    x:  920, y:   80 }
+      - { name: HR Complaint,                   t: [ circuit, pepper, post ], x:  830, y:   80 }
+      - { name: HOST SYNCHRONIZED,              t: [ moment ],                x: 1200, y:  190 }
+      - { name: To the Right,                   t: [ life ],                  x: 1600, y:  915 }
+      - { name: Beat Hits,                      t: [ smidge ],                x: 1790, y:  425 }
   - $map_def:
       name: track01-04
       img: img/maps/track01-04.jpg
     $for:
-      - { name: 4 | Whoa...,               t: [ chorus ],      x:  0, y:  0 }
-      - { name: Water Tower,               t: [ life ],        x:  0, y:  0 }
-      - { name: TO ALL EMPLOYEES,          t: [ vlog ],        x:  0, y:  0 }
-      - { name: Kale in the flesh!,        t: [ npcB ],        x:  0, y:  0 }
-      - { name: The Environment,           t: [ smidge ],      x:  0, y:  0 }
-      - { name: Dodging to the Beat,       t: [ smidge ],      x:  0, y:  0 }
-      - { name: New Day of the Week Added, t: [ board, post ], x:  0, y:  0 }
-      - {                                  t: [ door ],        x:  0, y:  0 }
-      - {                                  t: [ spectra ],     x:  0, y:  0 }
-      - { name: Rest Combos,               t: [ smidge ],      x:  0, y:  0 }
-      - { name: Lotta shortcuts around here..., t: [ moment ], x:  0, y:  0 }
+      - { name: 4 | Whoa...,               t: [ chorus ],      x: 1700, y:  530 }
+      - { name: Water Tower,               t: [ life ],        x: 1395, y:  215 }
+      - { name: TO ALL EMPLOYEES,          t: [ vlog ],        x: 1120, y:  180 }
+      - { name: Kale in the flesh!,        t: [ npcB ],        x:  990, y:  150 }
+      - { name: The Environment,           t: [ smidge ],      x:  810, y:  350 }
+      - { name: Dodging to the Beat,       t: [ smidge ],      x:  730, y:  280 }
+      - { name: New Day of the Week Added, t: [ board, post ], x:  645, y:  480 }
+      - {                                  t: [ door ],        x:  380, y:  990 }
+      - {                                  t: [ spectra ],     x:  460, y:  990 }
+      - { name: Rest Combos,               t: [ smidge ],      x:  615, y:  545 }
+      - { name: Lotta shortcuts around here..., t: [ moment ], x: 1015, y: 1024 }
 

@@ -6,13 +6,20 @@ const PATH = require('path');
 const yaml = require('./js-yaml-mod'); // require('js-yaml');
 const archiver = require('archiver');
 const semver = require('semver');
+const { merge, mergeWith } = require('lodash');
 const { Command } = require('commander');
+
+//-----------------------------------------------------------------------------
+
+
+
 
 //-----------------------------------------------------------------------------
 //#region YAML Parsing
 
 const COMMON_KEY = `$common`;
 const CHILDREN_KEY = `$for`;
+const MAP_DEF_KEY = `$map_def`;
 function flattenArray(array, common={}) {
 	const outList = [];
 	for (const item of array) {
@@ -32,6 +39,7 @@ function flattenArray(array, common={}) {
 		}
 	}
 }
+
 /**
  * 
  * @param {string} str - Input string
@@ -67,6 +75,11 @@ function parseYaml(str) {
 	}
 }
 
+async function loadYaml(path) {
+	const str = await fs.readFile(`src/${file}`, { encoding:'utf8' });
+	return parseYaml(str);
+}
+
 //#endregion
 //-----------------------------------------------------------------------------
 
@@ -83,8 +96,10 @@ const YAML_FILE_LIST = [
 	`manifest.yml`,
 ];
 
-program.action(async function main() 
-{
+program.action(async function main() {
+	const mapEntries = [];
+	
+	
 	const jobs = [];
 	const packageInfo = JSON.parse(await fs.readFile(`package.json`, { encoding:'utf8' }));
 	
@@ -92,8 +107,7 @@ program.action(async function main()
 	await fs.mkdir(program.opts().buildDir, { recursive:true });
 	
 	for (const file of YAML_FILE_LIST) {
-		const str = await fs.readFile(`src/${file}`, { encoding:'utf8' });
-		const data = parseYaml(str);
+		const data = await loadYaml(`src/${file}`);
 		if (file === 'manifest.yml') {
 			data['package_version'] = packageInfo.version;
 			data['author'] = packageInfo.author;
@@ -101,7 +115,50 @@ program.action(async function main()
 		jobs.push(fs.writeFile(`${program.opts().buildDir}/${file.replace('.yml', '.json')}`, JSON.stringify(data, undefined, '\t')));
 	}
 	
+	{
+		const tagDefs = await loadYaml(`src/locations/!tagdefs.yml`);
+		for (const path of await fs.readdir(`src/locations/`, { withFileTypes:true })) {
+			if (path.name.startsWith("!")) continue;
+			let data = await loadYaml(`src/locations/${path.name}`);
+			if (!Array.isArray(data)) data = [ data ];
+			for (const track of data) {
+				const children = track.children;
+				track.children = [];
+				
+				for (const loc of children) {
+					if (!loc[CHILDREN_KEY]) {
+						track.children.push(loc);
+						continue;
+					}
+					
+					const $common = loc[COMMON_KEY] ?? {};
+					if (loc[MAP_DEF_KEY]) {
+						const mapdef = merge({}, {
+							name: "", 
+							location_size: 24, 
+							location_border_thickness: 2,
+							location_shape: "rect",
+							img: "img/missing.png"
+						}, loc[MAP_DEF_KEY]);
+						$common["map"] = mapdef.name;
+						mapEntries.push(mapdef);
+					}
+					track.children.push(...flattenArray(loc[CHILDREN_KEY], $common));
+				}
+			}
+			
+		}
+		
+	}
 	
+	
+	
+	
+	
+	
+	
+	
+	// ------------------------------------------------------------------------
 	
 	await Promise.all(jobs);
 	
